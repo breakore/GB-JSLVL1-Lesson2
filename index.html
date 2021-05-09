@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSLVL1-L2</title>
+</head>
+
+<body>
+
+  <!-- ---------------------------Задание 1---------------------------
+
+  var a = 1, b = 1, c, d;
+  c = ++a; alert(c);           // 2 преинкремент ++ добавляет 1 к значению переменной
+  d = b++; alert(d);           // 1 постинкремент сначала возвращает начальное значение переменной, производит действие
+  c = (2+ ++a); alert(c);      // 5 в предыдущем действии, переменная а получила значение 2, в этом выражении, значение увеличилось на 1 и произведено действие сложения 2 +.
+  d = (2+ b++); alert(d);      // 4 в предыдущем действии, после вывода на экран, пеерменная получила +1 за счет постинкремента,затем, в этом действии, произведена операция сложения 2+.
+  alert(a);                    // 3 
+  alert(b);                    // 3 в предыдущих операциях, постинкременты и преинкременты прибавили переменным +2, с той разницей, что преинкремент вначале совершал действие, затем вывод, а постинкремент - наоборот.
+-->
+
+
+  <!-- ---------------------------Задание 2---------------------------
+  var a = 2;
+  var x = 1 + (a *= 2);  
+  Переменной х будет присвоено значение 5, т.к. в скобках, с помощью составного оператора, проводится операция умножения на 2.
+    -->
+
+
+  <!-- ---------------------------Задание 3--------------------------- -->
+  <!-- <script>
+    let a = Number(prompt('Введите первое число'));
+    let b = Number(prompt('Введите второе число'));
+    let result;
+
+    if (a >= 0 && b >= 0) {
+      result = a - b;
+      alert('Разность этих чисел равна=' + result);
+
+    } else if (a < 0 && b < 0) {
+      result = a * b;
+      alert('Произведение этих чисел равно=' + result);
+    } else {
+      result = a + b;
+      alert('Сумма этих чисел равна=' + result);
+    }
+  </script> -->
+
+
+  <!-- ---------------------------Задание 4---------------------------
+  <script>
+    function getRandomRange(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    let a = getRandomRange(0, 15);
+    alert('Выпало число: ' + a);
+    switch (a) {
+      case 1:
+        alert(a++);
+      case 2:
+        alert(a++);
+      case 3:
+        alert(a++);
+      case 4:
+        alert(a++);
+      case 5:
+        alert(a++);
+      case 6:
+        alert(a++);
+      case 7:
+        alert(a++);
+      case 8:
+        alert(a++);
+      case 9:
+        alert(a++);
+      case 10:
+        alert(a++);
+      case 11:
+        alert(a++);
+      case 12:
+        alert(a++);
+      case 13:
+        alert(a++);
+      case 14:
+        alert(a++);
+      case 15:
+        alert(a);
+        break;
+    }
+  </script> -->
+
+
+  <!-- ---------------------------Задание 5--------------------------- -->
+  <!-- <script>
+    let arg1 = Number(prompt('Введите первое число'));
+    let arg2 = Number(prompt('Введите второе число'));
+    // сложение
+    function summ(a, b) {
+      return a + b;
+    }
+    let sum = summ(arg1, arg2);
+    alert('Сумма: ' + sum);
+
+    // вычитание
+    function subs(a, b) {
+      return a - b;
+    }
+    let subst = subs(arg1, arg2);
+    alert('Разность: ' + subst);
+    
+    // умножение
+    function mult(a, b) {
+      return a * b;
+    }
+    let multipl = mult(arg1, arg2);
+    alert('Произведение :' + multipl);
+
+    // деление
+    function di(a, b) {
+      return a / b;
+    }
+    let divis = di(arg1, arg2);
+    alert('Частное: ' + divis);
+  </script> -->
+
+  <!-- ---------------------------Задание 6--------------------------- -->
+  <script>
+
+    // сложение
+    function summ(a, b) {
+      return a + b;
+    }
+    // вычитание
+    function subs(a, b) {
+      return a - b;
+    }
+    // умножение
+    function mult(a, b) {
+      return a * b;
+    }
+    // деление
+    function di(a, b) {
+      return a / b;
+    }
+
+    function mathOperation(arg1, arg2, oper) {
+      switch (oper) {
+        case "summ":
+          return summ(arg1, arg2);
+        case "subs":
+          return subs(arg1, arg2);
+        case "mult":
+          return mult(arg1, arg2);
+        case "di":
+          return di(arg1, arg2);
+      }
+    }
+
+    let arg1 = Number(prompt('Введите первое число'));
+    let arg2 = Number(prompt('Введите второе число'));
+    let oper = prompt('Введите желаемую операцию: сложение-summ, вычитание-subs,умножение-mult,деление-di');
+    if (oper == "summ") {
+      alert('Сумма: ' + mathOperation(arg1, arg2, oper));
+    }
+    else if (oper == "subs") {
+      alert('Разность: ' + mathOperation(arg1, arg2, oper));
+    }
+    else if (oper == "mult") {
+      alert('Произведение: ' + mathOperation(arg1, arg2, oper));
+    }
+    else if (oper == "di") {
+      alert('Частное: ' + mathOperation(arg1, arg2, oper));
+    }
+  </script>
+
+</body>
+
+</html>
